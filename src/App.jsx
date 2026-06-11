@@ -21,6 +21,10 @@ function Main() {
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold py-7">
           Hi, I'm <span className="bg-linear-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Sanskruti Borade</span>
         </h2>
+        <div className="flex items-center gap-2 text-gray-300 mb-4">
+          <span>📍</span>
+          <span className="text-sm md:text-base">Student at National Institute of Technology, Rourkela</span>
+        </div>
           <p className="text-lg md:text-xl max-w-3xl text-gray-300 leading-8">I build responsive web applications with React and JavaScript while exploring analytics, consulting, and product design. My focus is creating digital experiences that combine clean design, performance, and business impact.</p>
           <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-10 pt-8 text-center">
   
