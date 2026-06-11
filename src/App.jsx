@@ -15,7 +15,7 @@ function Main() {
       <div>
         <h4 className="text-xs md:text-sm uppercase tracking-[0.15em] md:tracking-[0.25em] text-pink-300">Frontend Developer • Data Analyst • UI/UX Designer</h4>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold py-7">
-          Hi, I'm <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Sanskruti Borade</span>
+          Hi, I'm <span className="bg-linear-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Sanskruti Borade</span>
         </h2>
           <p className="text-lg md:text-xl max-w-3xl text-gray-300 leading-8">I build responsive web applications with React and JavaScript while exploring analytics, consulting, and product design. My focus is creating digital experiences that combine clean design, performance, and business impact.</p>
           <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-10 pt-8 text-center">
@@ -31,14 +31,14 @@ function Main() {
       </div>
       </div>
       <div className="relative flex items-center justify-center">
-  <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 blur-[140px] opacity-30"></div>
+  <div className="absolute w-[75] h-[75] md:w-[125] md:h-[125] rounded-full bg-linear-to-r from-pink-500 via-purple-500 to-pink-500 blur-[140px] opacity-30"></div>
 
-  <div className="absolute w-[220px] h-[220px] md:w-[350px] md:h-[350px] rounded-full bg-pink-500 blur-[70px] opacity-30"></div>
+  <div className="absolute w-[55] h-[55] md:w-[87.5] md:h-[87.5] rounded-full bg-pink-500 blur-[70px] opacity-30"></div>
 
   <img
     src="my_pic.jpeg"
     alt="Sanskruti"
-    className="relative z-10 w-[250px] h-[250px] md:w-[320px] md:h-[320px] lg:w-[380px] lg:h-[380px] object-cover rounded-full shadow-2xl shadow-pink-500/20"
+    className="relative w-[62.5] h-[62.5] md:w-[320px] md:h-[80] lg:w-[95] lg:h-[95] object-cover rounded-full "
   />
 </div>
       </article>
