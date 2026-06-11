@@ -35,14 +35,14 @@ function Main() {
       </div>
       </div>
       <div className="relative flex items-center justify-center">
-  <div className="absolute w-[75] h-[75] md:w-[125] md:h-[125] rounded-full bg-linear-to-r from-pink-500 via-purple-500 to-pink-500 blur-[140px] opacity-30"></div>
+  <div className="absolute w-72 h-72 rounded-full bg-linear-to-r from-pink-500 via-purple-500 to-pink-500 blur-3xl opacity-30"></div>
 
-  <div className="absolute w-[55] h-[55] md:w-[87.5] md:h-[87.5] rounded-full bg-pink-500 blur-[70px] opacity-30"></div>
+  <div className="absolute w-52 h-52 rounded-full bg-pink-500 blur-2xl opacity-30"></div>
 
   <img
     src={myPic}
     alt="Sanskruti"
-    className="relative w-[62.5] h-[62.5] md:w-[320px] md:h-[80] lg:w-[95] lg:h-[95] object-cover rounded-full "
+    className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-cover rounded-full"
   />
 </div>
       </article>
