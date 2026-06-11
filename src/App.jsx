@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import './App.css';
+import myPic from './assets/my_pic.jpeg';
+import quizImg from './assets/quiz.jpeg';
+import gitImg from './assets/git.jpeg';
+import netflixImg from './assets/netflix.jpeg';
 function Main() {
   return (
     <div className="min-h-screen text-white bg-linear-to-br from-[#400035] via-[#000000] to-[#400035] overflow-hidden scroll-smooth">
@@ -36,7 +40,7 @@ function Main() {
   <div className="absolute w-[55] h-[55] md:w-[87.5] md:h-[87.5] rounded-full bg-pink-500 blur-[70px] opacity-30"></div>
 
   <img
-    src="my_pic.jpeg"
+    src={myPic}
     alt="Sanskruti"
     className="relative w-[62.5] h-[62.5] md:w-[320px] md:h-[80] lg:w-[95] lg:h-[95] object-cover rounded-full "
   />
@@ -68,19 +72,19 @@ function Main() {
 
       <div className="flex flex-col lg:flex-row justify-center gap-8 px-4 lg:px-8 max-w-7xl mx-auto">
         <div className="m-5 rounded-3xl overflow-hidden max-w-sm p-4 space-y-3 shadow-[#380b43] shadow-lg justify-center border border-transparent hover:border-purple-800 hover:bg-gray-700/40 hover:-translate-y-2 transition-all duration-300 hover:shadow-pink-500/20 hover:shadow-2xl" >
-          <img src="quiz.jpeg" className="w-full h-52 object-cover rounded-xl" />
+          <img src={quizImg} className="w-full h-52 object-cover rounded-xl" />
           <a href="https://quiz-app-2-theta.vercel.app/" className="text-xl md:text-2xl py-2 font-semibold">Quiz APP</a>
           <h3 className="m-2">Tailwind CSS • Javascript</h3> 
           <p className="italic">React quiz application featuring score tracking, state management, and a responsive user interface.</p>
         </div>
         <div className="m-5 rounded-3xl overflow-hidden max-w-sm p-4 space-y-3 shadow-[#380b43] shadow-lg border border-transparent hover:border-purple-800 hover:bg-gray-700/40 hover:-translate-y-2 transition-all duration-300 hover:shadow-pink-500/20 hover:shadow-2xl" >
-          <img src="git.jpeg" className="w-full h-52 object-cover rounded-xl" />
+          <img src={gitImg} className="w-full h-52 object-cover rounded-xl" />
           <a href="https://quiz-app-2-theta.vercel.app/" className="text-xl md:text-2xl py-2 font-semibold">GitHub Profile Viewer</a>
           <h3 className="m-2">Tailwind CSS • Javascript • GitHub API</h3> 
           <p className="italic">GitHub API-powered application that fetches and displays real-time profile information and repositories.</p>
         </div>
         <div className="m-5 rounded-3xl overflow-hidden max-w-sm p-4 space-y-3 shadow-[#380b43] shadow-lg border border-transparent hover:border-purple-800 hover:bg-gray-700/40 hover:-translate-y-2 transition-all duration-300 hover:shadow-pink-500/20 hover:shadow-2xl" >
-          <img src="netflix.jpeg" className="w-full h-52 object-cover rounded-xl" />
+          <img src={netflixImg} className="w-full h-52 object-cover rounded-xl" />
           <a href="https://quiz-app-2-theta.vercel.app/" className="text-xl md:text-2xl py-2 font-semibold">Netflix Clone</a>
           <h3 className="m-2">HTML • CSS</h3> 
           <p className="italic">Responsive Netflix-inspired landing page built using HTML and CSS with a focus on modern UI design.</p>
@@ -119,6 +123,7 @@ function Main() {
     </div>
   </div>
   );
+
 }
 
 export default Main;
