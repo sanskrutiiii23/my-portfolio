@@ -165,3 +165,80 @@
 //         </main>
 //     )
 // }
+
+// // DIGITAL TIMER
+
+// import { useState, useEffect } from "react";
+
+// function App() {
+//   const [time, setTime] = useState(new Date());
+
+//   const hours = time.getHours();
+//   const minutes = time.getMinutes();
+//   const seconds = time.getSeconds();
+
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setTime(new Date());
+//     }, 1000);
+
+//     return () => {
+//       clearInterval(timer);
+//     };
+//   }, []);
+
+//   return (
+//     <div>
+//       <h1>Digital Clock</h1>
+//       <h2>{time.toLocaleDateString()}</h2>
+//       <h2>{hours}:{minutes}:{seconds}</h2>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//// api fetch
+
+// import { useState, useEffect } from "react";
+
+// function App() {
+//   const [user, setUser] = useState(null);
+
+//   async function getDatal() {
+//     const response = await fetch( "https://randomuser.me/api/");
+//     const data = await response.json();
+//     setUser(data.results[0])
+//     console.log(data);
+//   }
+
+//   useEffect (() =>{getDatal();},[] )
+
+//    if (!user) {
+
+//     return <h1>Loading...</h1>;
+
+//   }
+
+//   return (
+
+//   <div>
+
+//     <img src={user.picture.large} />
+
+//     <h2>
+
+//       {user.name.first} {user.name.last}
+
+//     </h2>
+
+//     <h2>{user.phone}</h2>
+
+//     <p>{user.email}</p>
+
+//   </div>
+
+// );
+// }
+
+// export default App;
