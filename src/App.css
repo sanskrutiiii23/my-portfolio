@@ -1,143 +1,82 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #08090d;
+  color: #f1f5f9;
 }
 
 body {
-  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0b020a;
-  color: #ffffff;
+  background-color: #08090d;
+  color: #f1f5f9;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom modern scrollbar */
+* {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom refined scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #120310;
+  background: #08090d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5a114c;
+  background: #1e2230;
   border-radius: 9999px;
-  border: 2px solid #120310;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ec4899;
+  background: #333a4d;
 }
 
-/* Subtle selection highlight */
+/* Selection */
 ::selection {
-  background-color: #ec4899;
+  background-color: rgba(99, 102, 241, 0.35);
   color: #ffffff;
 }
 
-/* Standout keyframe animations */
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes float-reverse {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(8px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.35;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.65;
-    transform: scale(1.08);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 14s linear infinite;
-}
-
-.animate-float-slow {
-  animation: float-slow 6s ease-in-out infinite;
-}
-
-.animate-float-reverse {
-  animation: float-reverse 7s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 8s ease-in-out infinite;
-}
-
-/* Background Cyber Grid */
-.bg-grid-cyber {
+/* Linear-inspired subtle background grid */
+.bg-grid-pattern {
   background-image: 
-    linear-gradient(to right, rgba(236, 72, 153, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(236, 72, 153, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
-/* Glassmorphism helpers */
-.glass-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.015) 100%);
+/* Premium Linear / Vercel Card */
+.linear-card {
+  background: rgba(14, 17, 24, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-card:hover {
-  border-color: rgba(236, 72, 153, 0.35);
-  box-shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.18);
+.linear-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 30px -10px rgba(99, 102, 241, 0.15);
 }
 
-.glass-pill {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Hero text gradient (clean silver-white gradient, not gaudy) */
+.hero-headline {
+  background: linear-gradient(180deg, #ffffff 15%, #cbd5e1 70%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Shimmer keyframes for buttons and accents */
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.animate-shimmer {
-  animation: shimmer 2.5s infinite;
-}
-
-/* Conic gradient border for avatar */
-.avatar-halo {
-  background: conic-gradient(from 0deg, #ec4899, #a855f7, #06b6d4, #ec4899);
+/* Subtle glowing badge */
+.badge-glow {
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 }
