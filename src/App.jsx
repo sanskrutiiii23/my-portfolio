@@ -6,7 +6,6 @@ import lifequest from "./assets/lifequest.png";
 import leowatch from "./assets/leowatch.png";
 import sbLogo from "./assets/SB LOGO.webp";
 import StarfieldCanvas from "./components/StarfieldCanvas";
-import DigitalTwinChat from "./components/DigitalTwinChat";
 import ProjectModal from "./components/ProjectModal";
 
 function App() {
@@ -728,9 +727,6 @@ function App() {
           onClose={() => setActiveModalProject(null)}
         />
       )}
-
-      {/* AI Conversational Digital Twin Chat Widget */}
-      <DigitalTwinChat avatarSrc={myPic} />
     </div>
   );
 }
