@@ -138,7 +138,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#08090d] text-[#f1f5f9] bg-grid-pattern selection:bg-indigo-500/30 selection:text-white relative overflow-hidden">
+    <div className="min-h-screen bg-[#08090d] text-[#f1f5f9] bg-grid-pattern selection:bg-indigo-500/30 selection:text-white relative overflow-x-hidden">
       {/* Interactive Cosmic Starfield Background */}
       <StarfieldCanvas />
 
@@ -722,10 +722,12 @@ function App() {
       </footer>
 
       {/* Interactive Project Console Modal */}
-      <ProjectModal
-        project={activeModalProject}
-        onClose={() => setActiveModalProject(null)}
-      />
+      {activeModalProject && (
+        <ProjectModal
+          project={activeModalProject}
+          onClose={() => setActiveModalProject(null)}
+        />
+      )}
 
       {/* AI Conversational Digital Twin Chat Widget */}
       <DigitalTwinChat avatarSrc={myPic} />
