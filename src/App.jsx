@@ -22,10 +22,86 @@ function App() {
 
   const navLinks = [
     { name: "Home", href: "#home" },
-    { name: "Skills", href: "#skills" },
+    { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
     { name: "Designs", href: "#designs" },
     { name: "Contact", href: "#contact" },
+  ];
+
+  const experienceData = [
+    {
+      role: "AI Consulting Intern",
+      organization: "Optylize",
+      location: "New Delhi (Remote)",
+      period: "May 2026 – Present",
+      type: "Internship",
+      badgeColor: "bg-indigo-950/70 text-indigo-300 border-indigo-500/30",
+      description: "Spearheading market research and enterprise analytical frameworks for cutting-edge AI software adoption.",
+      points: [
+        "Spearheaded research into AI adoption across 45+ MSMEs, mapping critical market trends and core deployment strategies.",
+        "Formulated 5+ executive consulting deliverables and strategic market reports by analyzing dense enterprise datasets.",
+        "Engineered analytical frameworks to evaluate AI-driven software, optimizing client pitching cycles.",
+      ],
+      skills: ["AI Strategy", "Enterprise Analytics", "Market Research", "Consulting Deliverables"],
+    },
+    {
+      role: "Web Developer",
+      organization: "WebWiz, NIT Rourkela",
+      location: "Rourkela, Odisha",
+      period: "Oct 2025 – Present",
+      type: "Club Technical Team",
+      badgeColor: "bg-emerald-950/70 text-emerald-300 border-emerald-500/30",
+      description: "Building responsive frontends and streamlining repository pipelines for NIT Rourkela student applications.",
+      points: [
+        "Built 8+ responsive user-interface modules across student portal applications using React.js and JavaScript.",
+        "Managed repositories using a Git-flow pipeline to streamline deployment cycles and eliminate merge overhead.",
+        "Executed structural code audits and frontend optimization sprints that improved loading speeds by 15%.",
+      ],
+      skills: ["React.js", "JavaScript (ES6+)", "Git-flow", "Frontend Optimization", "UI Engineering"],
+    },
+    {
+      role: "Developer",
+      organization: "Google Developer Student Clubs (GDSC)",
+      location: "NIT Rourkela",
+      period: "2025 – Present",
+      type: "Technical Community",
+      badgeColor: "bg-amber-950/70 text-amber-300 border-amber-500/30",
+      description: "Architecting interactive applications and leading hands-on technical sessions for campus developers.",
+      points: [
+        "Architected interactive web applications and structured software labs for a community of 150+ campus developers.",
+        "Sharpened component layout workflows by resolving key architectural scale constraints within active design sprints.",
+      ],
+      skills: ["Web Applications", "Community Mentorship", "Software Architecture"],
+    },
+    {
+      role: "Designer & Junior Analyst",
+      organization: "Analytics and Consulting Club (ACC)",
+      location: "NIT Rourkela",
+      period: "2025 – Present",
+      type: "Club Core Member",
+      badgeColor: "bg-purple-950/70 text-purple-300 border-purple-500/30",
+      description: "Business case analysis and brand design for club advisory initiatives and case competitions.",
+      points: [
+        "Deconstructed 6 corporate business case studies to draft analytical models used directly in club advisory solutions.",
+        "Created 25+ brand-aligned presentation assets and UI mockups in Figma, elevating user engagement scores by 20%.",
+      ],
+      skills: ["Figma UI Design", "Business Case Analysis", "Analytical Modeling"],
+    },
+    {
+      role: "Fellow / Participant",
+      organization: "McKinsey Forward Program",
+      location: "McKinsey & Company",
+      period: "Credential: Credly Badge",
+      type: "Leadership Program",
+      badgeColor: "bg-cyan-950/70 text-cyan-300 border-cyan-500/30",
+      description: "Agile problem solving, structured communication, and data interpretation methodology.",
+      points: [
+        "Completed an intensive curriculum focused on agile problem-solving methodology, data interpretation, and team workflows.",
+        "Earned verified digital credential badge from McKinsey & Company.",
+      ],
+      skills: ["Agile Methodology", "Problem Solving", "Structured Communication"],
+    },
   ];
 
   const skillsData = [
@@ -174,6 +250,18 @@ function App() {
           {/* Quick Links / CTA */}
           <div className="hidden md:flex items-center gap-2.5">
             <a
+              href="/Sanskruti_Borade_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Resume PDF"
+              className="text-xs font-medium text-slate-300 hover:text-white px-3 py-1.5 rounded-full border border-white/10 hover:border-white/20 bg-white/[0.04] hover:bg-white/[0.08] transition-all flex items-center gap-1.5"
+            >
+              <svg className="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Resume</span>
+            </a>
+            <a
               href="https://github.com/sanskrutiiii23"
               target="_blank"
               rel="noopener noreferrer"
@@ -232,6 +320,18 @@ function App() {
                 {link.name}
               </a>
             ))}
+            <a
+              href="/Sanskruti_Borade_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-indigo-300 hover:text-white hover:bg-indigo-500/10 transition-colors"
+            >
+              <svg className="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>View Resume (PDF)</span>
+            </a>
             <div className="pt-2 border-t border-white/10">
               <a
                 href="#contact"
@@ -283,7 +383,7 @@ function App() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
               <a
                 href="#projects"
-                className="bg-white text-slate-950 font-semibold text-sm px-7 py-3.5 rounded-full hover:bg-slate-200 shadow-[0_4px_20px_rgba(255,255,255,0.15)] hover:shadow-[0_4px_25px_rgba(255,255,255,0.25)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2"
+                className="bg-white text-slate-950 font-semibold text-sm px-6 py-3.5 rounded-full hover:bg-slate-200 shadow-[0_4px_20px_rgba(255,255,255,0.15)] hover:shadow-[0_4px_25px_rgba(255,255,255,0.25)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2"
               >
                 <span>View Projects</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -292,8 +392,23 @@ function App() {
               </a>
 
               <a
+                href="/Sanskruti_Borade_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/40 hover:border-indigo-400 text-indigo-200 hover:text-white font-medium text-sm px-6 py-3.5 rounded-full hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(99,102,241,0.2)]"
+              >
+                <svg className="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Resume / CV</span>
+                <svg className="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+
+              <a
                 href="#contact"
-                className="bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-white/25 text-white font-medium text-sm px-7 py-3.5 rounded-full active:scale-[0.98] transition-all"
+                className="bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-white/25 text-white font-medium text-sm px-6 py-3.5 rounded-full active:scale-[0.98] transition-all"
               >
                 Get in Touch
               </a>
@@ -350,6 +465,191 @@ function App() {
                   alt="Sanskruti Borade"
                   className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Experience & Resume Section */}
+        <section id="experience" className="py-24 border-t border-white/[0.08] relative">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div className="space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/25 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
+                Career & Roles
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+                Experience & Leadership
+              </h2>
+              <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl">
+                Internships, technical campus organizations, and leadership initiatives where I've delivered measurable engineering and strategic impact.
+              </p>
+            </div>
+
+            {/* Resume Action Hub */}
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="/Sanskruti_Borade_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold text-xs tracking-wider uppercase px-5 py-3 rounded-full transition-all flex items-center gap-2 shadow-[0_4px_20px_rgba(99,102,241,0.35)] hover:scale-[1.02] active:scale-[0.98]"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <span>View Full Resume</span>
+              </a>
+
+              <a
+                href="/Sanskruti_Borade_Resume.pdf"
+                download="Sanskruti_Borade_Resume.pdf"
+                className="bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 hover:border-white/25 text-white font-medium text-xs tracking-wider uppercase px-5 py-3 rounded-full transition-all flex items-center gap-2"
+              >
+                <svg className="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                <span>Download PDF</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Timeline & Experience Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Experience Cards - Column 1 & 2 */}
+            <div className="lg:col-span-2 space-y-4">
+              {experienceData.map((exp, idx) => (
+                <div
+                  key={idx}
+                  className="linear-card rounded-2xl p-6 sm:p-7 hover:-translate-y-0.5 transition-all duration-300 group"
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-white/[0.06]">
+                    <div>
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
+                          {exp.role}
+                        </h3>
+                        <span className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full border ${exp.badgeColor}`}>
+                          {exp.type}
+                        </span>
+                      </div>
+                      <div className="text-sm font-medium text-slate-300 mt-0.5">
+                        {exp.organization} • <span className="text-slate-400 font-normal">{exp.location}</span>
+                      </div>
+                    </div>
+                    <div className="text-xs font-mono text-indigo-400 font-medium sm:text-right">
+                      {exp.period}
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-slate-300 font-normal mt-3 leading-relaxed">
+                    {exp.description}
+                  </p>
+
+                  <ul className="mt-3 space-y-2">
+                    {exp.points.map((point, pIdx) => (
+                      <li key={pIdx} className="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed">
+                        <span className="text-indigo-400 font-bold mt-0.5">▹</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-white/[0.04]">
+                    {exp.skills.map((skill, sIdx) => (
+                      <span
+                        key={sIdx}
+                        className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-white/[0.03] border border-white/[0.06] text-slate-400 group-hover:text-slate-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Quick Resume & Education Sidebar Card - Column 3 */}
+            <div className="space-y-6">
+              {/* Resume Document Card */}
+              <div className="p-7 rounded-2xl bg-gradient-to-br from-indigo-950/40 via-[#0e111a] to-[#0a0c12] border border-indigo-500/25 backdrop-blur-xl shadow-xl space-y-5">
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    Verified PDF
+                  </span>
+                </div>
+
+                <div className="space-y-1.5">
+                  <h4 className="text-base font-bold text-white">Sanskruti Borade — Resume</h4>
+                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
+                    Curriculum vitae covering technical experience, software proficiencies, academic background at NIT Rourkela, and project achievements.
+                  </p>
+                </div>
+
+                <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-xs space-y-1.5 font-mono text-slate-400">
+                  <div className="flex justify-between">
+                    <span>Format:</span>
+                    <span className="text-slate-200">PDF Document</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>File:</span>
+                    <span className="text-slate-200 truncate max-w-[150px]">Sanskruti_Borade_Resume.pdf</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Status:</span>
+                    <span className="text-emerald-400">Latest Version</span>
+                  </div>
+                </div>
+
+                <div className="space-y-2 pt-2">
+                  <a
+                    href="/Sanskruti_Borade_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full text-center text-xs font-semibold py-3 px-4 rounded-xl bg-indigo-500 hover:bg-indigo-600 text-white transition-all flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(99,102,241,0.3)] hover:scale-[1.01] active:scale-[0.99]"
+                  >
+                    <span>Open in New Tab</span>
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  <a
+                    href="/Sanskruti_Borade_Resume.pdf"
+                    download="Sanskruti_Borade_Resume.pdf"
+                    className="w-full text-center text-xs font-medium py-2.5 px-4 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-white/20 text-slate-200 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99]"
+                  >
+                    <svg className="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span>Direct Download</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Education Card */}
+              <div className="linear-card rounded-2xl p-6 space-y-4">
+                <div className="flex items-center gap-2 text-indigo-400 text-xs font-semibold uppercase tracking-wider">
+                  <span>🎓</span>
+                  <span>Academic Background</span>
+                </div>
+                <div className="space-y-1">
+                  <h4 className="text-sm font-bold text-white leading-snug">
+                    National Institute of Technology (NIT), Rourkela
+                  </h4>
+                  <p className="text-xs text-slate-300 font-medium">
+                    Bachelor of Technology (B.Tech)
+                  </p>
+                  <p className="text-xs text-slate-400">
+                    Food Processing Engineering
+                  </p>
+                  <div className="text-[11px] font-mono text-indigo-400 pt-1">
+                    Aug. 2025 – Aug. 2029 • Rourkela, Odisha
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -707,9 +1007,11 @@ function App() {
             <span>National Institute of Technology, Rourkela</span>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6">
             <a href="#home" className="hover:text-white transition-colors">Home</a>
+            <a href="#experience" className="hover:text-white transition-colors">Experience</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
+            <a href="/Sanskruti_Borade_Resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-indigo-300">Resume (PDF)</a>
             <a href="https://github.com/sanskrutiiii23" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
             <a href="https://www.linkedin.com/in/sanskruti-borade-39291536b/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
           </div>
